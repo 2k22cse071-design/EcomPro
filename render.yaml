@@ -1,0 +1,33 @@
+services:
+  - type: web
+    name: ecom-backend
+    env: docker
+    plan: free
+    region: singapore
+    dockerContext: backend
+    dockerfilePath: backend/Dockerfile
+    healthCheckPath: /api/products/marketplace
+    envVars:
+      - key: SPRING_DATASOURCE_URL
+        sync: false
+      - key: SPRING_DATASOURCE_USERNAME
+        sync: false
+      - key: SPRING_DATASOURCE_PASSWORD
+        sync: false
+      - key: STRIPE_SECRET_KEY
+        sync: false
+      - key: SPRING_MAIL_USERNAME
+        sync: false
+      - key: SPRING_MAIL_PASSWORD
+        sync: false
+      - key: ALLOWED_ORIGINS
+        sync: false
+        description: "Comma separated list of allowed origins (e.g. your Vercel URL)"
+      - key: ADMIN_EMAIL
+        sync: false
+      - key: ADMIN_PASSWORD
+        sync: false
+      - key: ASTADMIN_EMAIL
+        sync: false
+      - key: ASTADMIN_PASSWORD
+        sync: false

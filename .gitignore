@@ -1,0 +1,38 @@
+# Root .gitignore for Monorepo
+
+# Ignore node_modules
+**/node_modules/
+**/dist/
+**/build/
+
+# Ignore Java build artifacts
+**/target/
+**/*.class
+**/*.jar
+**/*.war
+**/*.ear
+
+# Ignore environment variables and secrets
+**/.env
+**/.env.local
+**/application-secret.properties
+
+# Logs
+**/*.log
+backend_crash.txt
+backend_log.txt
+backend_out.txt
+build_debug.txt
+compile_errors.txt
+compile_output.txt
+run_error.txt
+
+# OS Files
+.DS_Store
+Thumbs.db
+
+# IDEs
+.idea/
+.vscode/
+*.swp
+*.swo
